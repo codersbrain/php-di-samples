@@ -1,0 +1,10 @@
+services:
+    my_service:
+        class:       Services\MyService
+        #file:       Services/MyService.php
+        #arguments: [@my_message]
+        calls: 
+             - [setMyMessage, [@my_message]]
+    my_message:
+        class:       Services\MyMessage
+        #file:       Services/MyMessage.php
