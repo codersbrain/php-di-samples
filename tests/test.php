@@ -1,6 +1,6 @@
 <?php
-require_once 'Services/MyService.php';
-require_once 'Services/MyMessage.php';
+require_once __DIR__.'/../Services/MyService.php';
+require_once __DIR__.'/../Services/MyMessage.php';
 
 use Services\MyService;
 use Services\MyMessage;

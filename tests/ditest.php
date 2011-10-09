@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__.'/Utility/DIContainer.php';
+require_once __DIR__.'/../Utility/DIContainer.php';
 
 use Utility\DIContainer;
 

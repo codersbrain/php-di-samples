@@ -1,3 +1,6 @@
+parameters:
+    home_path: /home/taufek/workspaces/php-ws/di-sample
+
 services:
     my_service:
         class:       Services\MyService
@@ -8,3 +11,11 @@ services:
     my_message:
         class:       Services\MyMessage
         #file:       Services/MyMessage.php
+    my_config:
+        class: MyConfig
+        file: %home_path%/Services/MyConfig.php
+        calls:
+            - [setConfig, [@zend_config_xml]]
+    zend_config_xml:
+        class: Zend_Config_Xml
+        arguments: ['../configs/configs.xml', 'production']       
