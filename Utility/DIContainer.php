@@ -24,6 +24,7 @@ class DIContainer {
 		$loader->registerPrefix('Zend','/usr/share/php');
 		$loader->register();
 		$this->container = new ContainerBuilder();
+		$this->container->setParameter('home_path', __DIR__.'/..');
 		$loader = new YamlFileLoader($this->container, new FileLocator(__DIR__.'/../configs'));
 		$loader->load('di.yaml');
 	}

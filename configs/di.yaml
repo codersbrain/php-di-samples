@@ -1,5 +1,5 @@
 parameters:
-    home_path: /home/taufek/workspaces/php-ws/di-sample
+    #home_path: test
 
 services:
     my_service:
