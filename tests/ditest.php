@@ -8,4 +8,5 @@ $serviceContainer->init();
 
 $service = $serviceContainer->get('my_service');
 
-echo $service->getMessage();
+echo $service->displayMessage();
+echo "\n";
