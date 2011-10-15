@@ -1,21 +1,15 @@
 <?php
 namespace Services;
-
-class MyService {
-
-	private $myMessage;
-
-	public function __construct(MyMessage $message=null){
-		$this->myMessage = $message;
-	}
-
-	public function setMyMessage(MyMessage $message){
-
-		$this->myMessage = $message;
-	}
-
-	public function getMessage(){
-		return $this->myMessage->getMessage();
-	}
-
+/**
+* 
+* @author dhydrated
+* @since Oct 15, 2011
+*/
+interface MyService {
+	
+	public function setMyMessage(MyMessage $message);
+	
+	public function setMyValidator(MyValidator $myValidator);
+	
+	public function displayMessage();
 }

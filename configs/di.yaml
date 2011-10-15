@@ -3,14 +3,20 @@ parameters:
 
 services:
     my_service:
-        class:       Services\MyService
-        #file:       Services/MyService.php
+        class:       Services\MyServiceImpl
+        #file:       Services/MyServiceImpl.php
         #arguments: [@my_message]
         calls: 
              - [setMyMessage, [@my_message]]
+             - [setMyValidator, [@my_validator]]
     my_message:
-        class:       Services\MyMessage
-        #file:       Services/MyMessage.php
+        class:       Services\MyMessageImpl
+        #file:       Services/MyMessageImpl.php
+        arguments: [@my_dao]
+    my_validator:
+        class:       Services\MyValidatorImpl
+    my_dao:
+        class:       Services\MyDaoImpl
     my_config:
         class: MyConfig
         file: %home_path%/Services/MyConfig.php
